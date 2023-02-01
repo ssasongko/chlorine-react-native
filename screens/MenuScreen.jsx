@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Image, View } from 'react-native'
+import { FlatList, Image, View, Button as ButtonNative } from 'react-native'
 import { Card, Text, Badge, Button } from 'react-native-paper';
 
 const listMakanan = [
@@ -69,14 +69,10 @@ const listMakanan = [
   },
 ];
 
-const MenuScreen = () => {
+const MenuScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1 }}>  
-      <View style={{ alignItems: 'center', borderColor: 'black', borderBottomWidth: 2 }}>
-        <Text variant="displayMedium">List Menu</Text>
-      </View>
+    <View style={{ flex: 1, backgroundColor: 'white', paddingHorizontal: 10 }}>
       <FlatList
-        style={{ paddingTop: 10 }}
         data={listMakanan}
         renderItem={({ item }) => (
           <Card style={{ marginBottom: 20 }}>
@@ -86,9 +82,7 @@ const MenuScreen = () => {
             <Card.Content style={{ padding: 10 }}>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text variant="titleLarge" style={{ fontWeight: 'bold' }}>{item?.nama}</Text>
-                  <Badge size={25} style={{
-                  backgroundColor: ''
-                }}>
+                <Badge size={25}>
                   {item?.jenis}
                 </Badge>
               </View>
@@ -99,7 +93,6 @@ const MenuScreen = () => {
         )}
         keyExtractor={item => item.kode}
       />
-
     </View>
   )
 }

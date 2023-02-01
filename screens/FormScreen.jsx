@@ -5,7 +5,7 @@ import { Text } from 'react-native-paper';
 import TextField from '../components/TextField';
 import moment from 'moment';
 
-export const FormScreen = () => {
+export const FormScreen = ({ navigation }) => {
   const [kodeMenu, setKodeMenu] = useState("");
   const [nomorMeja, setnomorMeja] = useState(0);
   const [harga, setHarga] = useState(0);
@@ -34,12 +34,8 @@ export const FormScreen = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ alignItems: 'center', borderColor: 'black', borderBottomWidth: 2 }}>
-        <Text variant="displayMedium">Buat Pesanan</Text>
-      </View>
-
-      <View style={{ marginTop: 20 }}>
+    <View style={{ flex: 1, backgroundColor: 'white', paddingHorizontal: 10 }}>
+      <View>
         <TextField
           val={nomorMeja}
           onChange={setnomorMeja}
