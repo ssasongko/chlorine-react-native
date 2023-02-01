@@ -71,8 +71,10 @@ const listMakanan = [
 
 const MenuScreen = () => {
   return (
-    <View style={{ flex: 1 }}>
-      <Text variant="displayMedium">List Foods</Text>
+    <View style={{ flex: 1 }}>  
+      <View style={{ alignItems: 'center', borderColor: 'black', borderBottomWidth: 2 }}>
+        <Text variant="displayMedium">List Menu</Text>
+      </View>
       <FlatList
         style={{ paddingTop: 10 }}
         data={listMakanan}
@@ -90,7 +92,7 @@ const MenuScreen = () => {
                   {item?.jenis}
                 </Badge>
               </View>
-              <Text variant="bodyMedium" style={{ marginTop: 5 }}>{item?.description}</Text>
+              <Text variant="bodyMedium" style={{ marginTop: 5 }}>{item?.description}.</Text>
               <Text variant="titleMedium" style={{ marginTop: 5 }}>Rp. {item?.harga}</Text>
             </Card.Content>
           </Card>
