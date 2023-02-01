@@ -2339,6 +2339,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/datetimepicker@npm:^6.7.3":
+  version: 6.7.3
+  resolution: "@react-native-community/datetimepicker@npm:6.7.3"
+  dependencies:
+    invariant: ^2.2.4
+  checksum: ad08d786aafe8c33135c5f2bdc227d54970bf41ee9f9876a7d4ed365733f02c6e4fb2b8df8f0c45702e5aee43843fe78b7c04c1ff7a1862cde48789e68b9d355
+  languageName: node
+  linkType: hard
+
 "@react-native/assets@npm:1.0.0":
   version: 1.0.0
   resolution: "@react-native/assets@npm:1.0.0"
@@ -4081,6 +4090,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.9
     "@expo/webpack-config": ^0.17.2
+    "@react-native-community/datetimepicker": ^6.7.3
     expo: ~47.0.12
     expo-status-bar: ~1.4.2
     glob: ^8.1.0
