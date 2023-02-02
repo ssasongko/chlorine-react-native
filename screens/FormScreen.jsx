@@ -36,6 +36,7 @@ export const FormScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: 'white', paddingHorizontal: 10 }}>
       <View>
+        <Text variant="headlineLarge">Buat Pesanan</Text>
         <TextField
           val={nomorMeja}
           onChange={setnomorMeja}
@@ -85,9 +86,10 @@ export const FormScreen = ({ navigation }) => {
       </View>
 
       <View style={{ marginTop: 20 }}>
-        <Text variant="bodyLarge">Nomor Meja: {nomorMeja == 0 ? '-' : nomorMeja}</Text>
+        <Text variant="headlineLarge">Detail Pesanan</Text>
+        <Text variant="bodyLarge" style={{ marginTop: 5 }}>Nomor Meja: {nomorMeja == 0 ? '-' : nomorMeja}</Text>
         <Text variant="bodyLarge" style={{ marginTop: 5 }}>Kode Menu: {kodeMenu ? kodeMenu : '-'}</Text>
-        <Text variant="bodyLarge" style={{ marginTop: 5 }}>Harga: {harga == 0 ? '-' : harga}</Text>
+        <Text variant="bodyLarge" style={{ marginTop: 5 }}>Harga: Rp. {harga == 0 ? '-' : harga}</Text>
         <Text variant="bodyLarge" style={{ marginTop: 5 }}>Time: {moment(date).format('HH:mm:ss')}</Text>
         <Text variant="bodyLarge" style={{ marginTop: 5 }}>Date: {moment(date).format('D MMM YYYY')}</Text>
       </View>

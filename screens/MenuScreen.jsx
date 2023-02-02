@@ -86,6 +86,7 @@ const MenuScreen = ({ navigation }) => {
                   {item?.jenis}
                 </Badge>
               </View>
+              <Text variant="bodyMedium" style={{ marginTop: 5 }}>Kode: {item.kode}</Text>
               <Text variant="bodyMedium" style={{ marginTop: 5 }}>{item?.description}.</Text>
               <Text variant="titleMedium" style={{ marginTop: 5 }}>Rp. {item?.harga}</Text>
             </Card.Content>
